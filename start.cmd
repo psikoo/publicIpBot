@@ -1,2 +1,2 @@
 node .\src\deploy.js
-node .\src\index.js
+node .\src\discordBot.js
