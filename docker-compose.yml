@@ -1,0 +1,5 @@
+services:
+  bot:
+    container_name: discord-bot
+    image: discord-bot:1
+    restart: always
