@@ -1,7 +1,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
 const { Client, Collection, Events, GatewayIntentBits } = require("discord.js");
-const { token } = require("./config.json");
+require('dotenv').config()
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
@@ -17,7 +17,7 @@ for (const folder of commandFolders) {
 		const command = require(filePath);
 		if ("data" in command && "execute" in command) {
 			client.commands.set(command.data.name, command);
-            console.log(`🟩 command: ${command.data.name}`);
+      console.log(`🟩 command: ${command.data.name}`);
 		} else {
 			console.log(`🟥 command: ${filePath}`);
 		}
@@ -25,12 +25,12 @@ for (const folder of commandFolders) {
 }
 
 client.once(Events.ClientReady, readyClient => {
-    console.log("> --------------------------------- <");
+  console.log("> --------------------------------- <");
 	console.log(`🟩 Session started: ${readyClient.user.tag}`);
 });
 
 client.on(Events.InteractionCreate, async interaction => {
-    if (!interaction.isChatInputCommand()) return;
+  if (!interaction.isChatInputCommand()) return;
 	const command = interaction.client.commands.get(interaction.commandName);
 
 	if (!command) {
@@ -50,4 +50,4 @@ client.on(Events.InteractionCreate, async interaction => {
 	}
 });
 
-client.login(token);
+client.login(process.env.TOKEN);
