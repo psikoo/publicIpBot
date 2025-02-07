@@ -9,5 +9,5 @@ RUN npm install
 COPY . /usr/src/publicIpBot
 
 # Start the bot.
-RUN node deploy.js
-CMD ["node", "discordBot.js"]
+RUN node ./src/deploy.js
+CMD ["node", "./src/discordBot.js"]
