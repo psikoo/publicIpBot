@@ -1,3 +1,3 @@
 #!/bin/bash
-docker build -t discord-bot .
-docker run  --restart always -d discord-bot
+sudo docker build -t discord-bot:1 .
+sudo docker run  --restart always -d discord-bot
