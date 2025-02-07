@@ -1,38 +1,24 @@
 
 # publicIpBot
 
-publicIpBot is a simple Discord.js bot created following Discord.js [guide](https://discordjs.guide). Its only purpose is to fetch the ip of the router it is connected to. Why? I don't feel like paying my ISP 20 euros a month to have a static public ip address.
+publicIpBot is a simple Discord.js bot created following Discord.js [guide](https://discordjs.guide). Its only purpose is to fetch the ip of the router it is connected to. Why? I don't feel like paying my ISP 20 euros a month to have a static public ip address. (generates ssh command to connect to the server!)
 
 ## Running the bot
 
-**Usage information:**
-
-This script runs with Node.js and npm. To run the script you must install Node.js and npm.
-
-**Before running:**
-
-- Create a "config.json" file inside the "src" directory and add the following contents to it:
-``` json
-{
-	"token": "TOKEN",
-	"clientId": "CLIENTID",
-	"guildId": "GUILDID"
-}
-
+- Create a ".env" file inside the base directory and add the following contents to it:
+``` env
+#BOT
+TOKEN="token"
+CID="clientid"
+GID="guildid"
+#SSH
+USR="username to ssh into"
+PORT="port to ssh to"
 ```
-- Get your TOKEN and CLIENTID [here](https://discord.com/developers/applications).
+- Get your TOKEN and CID [here](https://discord.com/developers/applications).
 
-- You also need to install the needed dependencies by running the following command:
+To start the bot just do:
 
 ```bash
-npm install
-```
-
-### Actually running the script
-
-**start.cmd:**
-
-It deploys the commands to the given guild and starts the bot.
-```bash
-.\start.cmd
+sudo ./stat.sh
 ```
