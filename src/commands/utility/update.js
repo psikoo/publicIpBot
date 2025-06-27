@@ -67,5 +67,3 @@ module.exports = {
     }
 	},
 };
-449694263
-api/json/v3/dns/edit/DOMAIN/ID
