@@ -16,6 +16,6 @@ module.exports = {
 				headers: headersList,
 		}
 		let response = await axios.request(reqOptions);
-		await interaction.reply("`ssh "+process.env.USR+"@"+response.data.ip+" -p "+process.env.PORT+"`");
+		await interaction.reply("`ssh "+process.env.USR+"@"+response.data.ip+" -p "+process.env.PORT+"`\n`ssh "+process.env.USR+"@"+process.env.LIP+" -p "+process.env.PORT+"`");
 	},
 };
