@@ -8,14 +8,14 @@ publicIpBot is a simple Discord.js bot created following Discord.js [guide](http
 - Create a ".env" file inside the base directory and add the following contents to it:
 ``` env
 #BOT
-TOKEN="token"
-CID="clientid"
-GID="guildid"
+BOT_TOKEN="token"
+BOT_CLIENT_ID="clientid"
+BOT_GUILD_ID="guildid"
 #SSH
-USR="username to ssh into"
+USERNAME="username to ssh into"
 PORT="port to ssh to"
 ```
-- Get your TOKEN and CID [here](https://discord.com/developers/applications).
+- Get your BOT_TOKEN and BOT_CLIENT_ID [here](https://discord.com/developers/applications).
 
 To start the bot just do:
 

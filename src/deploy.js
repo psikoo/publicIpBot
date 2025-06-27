@@ -21,14 +21,14 @@ for (const folder of commandFolders) {
 	}
 }
 
-const rest = new REST().setToken(process.env.TOKEN);
+const rest = new REST().setToken(process.env.BOT_TOKEN);
 
 (async () => {
 	try {
 		console.log(`🟧 Refreshing ${commands.length} application (/) commands.`);
 
 		const data = await rest.put(
-			Routes.applicationGuildCommands(process.env.CID, process.env.GID),
+			Routes.applicationGuildCommands(process.env.BOT_CLIENT_ID, process.env.BOT_GUILD_ID),
 			{ body: commands },
 		);
 

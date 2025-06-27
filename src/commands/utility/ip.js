@@ -15,6 +15,6 @@ module.exports = {
 				headers: headersList,
 		}
 		let response = await axios.request(reqOptions);
-		await interaction.reply("`"+response.data.ip+"`");
+		await interaction.reply(".\n`"+response.data.ip+"`");
 	},
 };
