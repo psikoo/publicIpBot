@@ -37,6 +37,7 @@ module.exports = {
     for(let i=0; i<idResponse.data.records.length; i++) {
       if(idResponse.data.records[i].name == process.env.DOMAIN) {
         domainId = idResponse.data.records[i].id;
+        if(idResponse.data.records[i].content == currentIp) { await interaction.reply(".\n`🔴 The ID is the same`"); }
       }
     }
     if(domainId == "" || !domainId) { await interaction.reply(".\n`🔴 ERROR Domain ID is null`"); }
