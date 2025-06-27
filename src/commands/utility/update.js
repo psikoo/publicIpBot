@@ -19,8 +19,8 @@ module.exports = {
 
     // Get domain ID
     let idData = JSON.stringify({
-      "secretapikey": process.env.KEY,
-      "apikey": process.env.SECRET
+      "secretapikey": process.env.SECRET,
+      "apikey": process.env.KEY
     });
     let idHeadersList = { 
       "Accept": "*/*", 
@@ -43,8 +43,8 @@ module.exports = {
 
     // Update the DNS
     let upData = JSON.stringify({
-      "secretapikey": process.env.KEY,
-      "apikey": process.env.SECRET,
+      "secretapikey": process.env.SECRET,
+      "apikey": process.env.KEY,
       "type": "A",
       "content": currentIp,
       "notes": "updated by publicIpBot "+new Date()
