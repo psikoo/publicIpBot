@@ -2,6 +2,5 @@
 sudo git stash
 sudo git pull
 sudo chmod +x ./start.sh
-sudo docker build -t discord-bot:1 .
-sudo docker compose down
-sudo docker compose up -d
+sudo docker build -t public-ip-bot:1 .
+sudo docker restart public-ip-bot
